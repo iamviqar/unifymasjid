@@ -11,13 +11,13 @@ import com.hqv.unifymasjid.service.MasjidService;
 @RestController
 
 public class MasjidRestApi {
-	
+
 	@Autowired
 	MasjidService masjidService;
-	
+
 	@PostMapping("/masjiddto")
 	public MasjidDto saveMasjid(@RequestBody MasjidDto masjidDto) {
 		masjidService.saveMasjid(masjidDto);
 		return masjidDto;
-}
+	}
 }
