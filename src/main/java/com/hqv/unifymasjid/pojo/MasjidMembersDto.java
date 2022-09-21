@@ -9,9 +9,7 @@ public class MasjidMembersDto {
 	private String name;
 	private String phone;
 	private String email;
-	
 
 	private MasjidDto masjidDto;
 
-	
 }

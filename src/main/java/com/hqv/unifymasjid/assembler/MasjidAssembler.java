@@ -15,21 +15,20 @@ import com.hqv.unifymasjid.pojo.PrayerTimeDto;
 public class MasjidAssembler {
 	public Masjid assembleMasjid(MasjidDto masjidDto) {
 		Masjid masjid = null;
-		if(masjidDto!=null) {
-		masjid = new Masjid();
-		masjid.setId(masjidDto.getId());
-		masjid.setArea_code(masjidDto.getArea_code());
-		masjid.setName(masjidDto.getName());
-		masjid.setAddress(masjidDto.getAddress());
-		masjid.setPhone(masjidDto.getPhone());
-		masjid.setEmail(masjidDto.getEmail());
-		masjid.setUsername(masjidDto.getUsername());
-		masjid.setContact_person_name(masjidDto.getContact_person_name());
-		masjid.setContact_person_phone(masjidDto.getContact_person_phone());
-		masjid.setContact_person_email(masjidDto.getContact_person_email());
-		
-		
-	}
+		if (masjidDto != null) {
+			masjid = new Masjid();
+			masjid.setId(masjidDto.getId());
+			masjid.setArea_code(masjidDto.getArea_code());
+			masjid.setName(masjidDto.getName());
+			masjid.setAddress(masjidDto.getAddress());
+			masjid.setPhone(masjidDto.getPhone());
+			masjid.setEmail(masjidDto.getEmail());
+			masjid.setUsername(masjidDto.getUsername());
+			masjid.setContact_person_name(masjidDto.getContact_person_name());
+			masjid.setContact_person_phone(masjidDto.getContact_person_phone());
+			masjid.setContact_person_email(masjidDto.getContact_person_email());
+
+		}
 		return masjid;
 
 	}
@@ -56,7 +55,7 @@ public class MasjidAssembler {
 	 * masjidMembers.setMasjid(assembleMasjid(masjidMembersDto.getMasjidDto()));
 	 * masjidMembersList.add(masjidMembers); } return masjidMembersList; }
 	 */
-	
+
 	public PrayerTime assemblePrayerTime(PrayerTimeDto prayerTimeDto) {
 		PrayerTime prayerTime = new PrayerTime();
 		prayerTime.setPid(prayerTimeDto.getPid());
@@ -78,31 +77,29 @@ public class MasjidAssembler {
 	 * prayerTime.setPrayer_time(prayerTimeDto.getPrayer_time());
 	 * prayerTime.setMasjid(assembleMasjid(prayerTimeDto.getMasjidDto()));
 	 * prayerTimeList.add(prayerTime); } return prayerTimeList;
-	
-	}
+	 * 
+	 * }
 	 */
-public MasjidAlias assembleMasjidAlias(MasjidAliasDto masjidAliasDto) {
-	MasjidAlias masjidAlias = new MasjidAlias();
-	masjidAlias.setMaid(masjidAliasDto.getMaid());
-	masjidAlias.setName(masjidAliasDto.getName());
-	masjidAlias.setMasjid(assembleMasjid(masjidAliasDto.getMasjidDto()));
-	
-	return masjidAlias;
-	
+	public MasjidAlias assembleMasjidAlias(MasjidAliasDto masjidAliasDto) {
+		MasjidAlias masjidAlias = new MasjidAlias();
+		masjidAlias.setMaid(masjidAliasDto.getMaid());
+		masjidAlias.setName(masjidAliasDto.getName());
+		masjidAlias.setMasjid(assembleMasjid(masjidAliasDto.getMasjidDto()));
+
+		return masjidAlias;
+
+	}
+	/*
+	 * public List<MasjidAlias> assembleMasjidAliasList(MasjidAliasDto
+	 * masjidAliasDto) {
+	 * 
+	 * List<MasjidAlias> masjidAliasList = new ArrayList<MasjidAlias>();
+	 * for(MasjidAliasDto masjidAliasDto : masjidDto.getMasjidAliasList()) {
+	 * MasjidAlias masjidAlias = new MasjidAlias();
+	 * masjidAlias.setMaid(masjidAliasDto.getMaid());
+	 * masjidAlias.setName(masjidAliasDto.getName());
+	 * masjidAlias.setMasjid(assembleMasjid(masjidAliasDto.getMasjidDto()));
+	 * masjidAliasList.add(masjidAlias); } return masjidAliasList; }
+	 */
+
 }
-/*
- * public List<MasjidAlias> assembleMasjidAliasList(MasjidAliasDto
- * masjidAliasDto) {
- * 
- * List<MasjidAlias> masjidAliasList = new ArrayList<MasjidAlias>();
- * for(MasjidAliasDto masjidAliasDto : masjidDto.getMasjidAliasList()) {
- * MasjidAlias masjidAlias = new MasjidAlias();
- * masjidAlias.setMaid(masjidAliasDto.getMaid());
- * masjidAlias.setName(masjidAliasDto.getName());
- * masjidAlias.setMasjid(assembleMasjid(masjidAliasDto.getMasjidDto()));
- * masjidAliasList.add(masjidAlias); } return masjidAliasList; }
- */
-
-
-}
-

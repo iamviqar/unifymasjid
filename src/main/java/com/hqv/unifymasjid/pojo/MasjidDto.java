@@ -15,9 +15,9 @@ public class MasjidDto {
 	private String contact_person_name;
 	private String contact_person_phone;
 	private String contact_person_email;
-	
+
 	public List<MasjidMembersDto> masjidMembersList;
 	public List<PrayerTimeDto> prayerTimeList;
 	public List<MasjidAliasDto> masjidAliasList;
-	
+
 }
