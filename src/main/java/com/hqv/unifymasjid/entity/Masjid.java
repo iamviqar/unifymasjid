@@ -29,5 +29,4 @@ public class Masjid {
 	private String contact_person_phone;
 	private String contact_person_email;
 
-
 }

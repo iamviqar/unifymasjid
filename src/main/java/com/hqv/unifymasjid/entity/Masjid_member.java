@@ -19,7 +19,6 @@ public class Masjid_member {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 
-
 	private Long id;
 
 	private String name;
@@ -27,7 +26,6 @@ public class Masjid_member {
 	private String phone;
 
 	private String email;
-
 
 	@ManyToOne
 	@JoinColumn(name = "masjid_id")

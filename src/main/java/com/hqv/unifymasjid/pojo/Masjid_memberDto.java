@@ -13,5 +13,4 @@ public class Masjid_memberDto {
 	private String email;
 	private MasjidDto masjiddto;
 
-
 }

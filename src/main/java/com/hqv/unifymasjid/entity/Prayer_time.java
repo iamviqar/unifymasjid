@@ -20,15 +20,11 @@ public class Prayer_time {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 
-
 	private Long id;
-
 
 	private String name;
 
-
 	private String call_time;
-
 
 	private String prayer_time;
 

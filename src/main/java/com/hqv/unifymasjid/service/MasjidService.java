@@ -27,34 +27,28 @@ public class MasjidService {
 	private Prayer_timeRepository prayer_timeRepository;
 	@Autowired
 	private Masjid_aliasRepository masjid_aliasRepository;
-    @Autowired
-    private MasjidAssembler masjidAssembler;
-	
-	
-	 
-	 
-	  public MasjidDto saveMasjid(MasjidDto masjidDto) {
-			Masjid masjid = masjidRepository.save(masjidAssembler.assembleMasjid(masjidDto));
-			
-			for (Masjid_aliasDto masjid_aliasDto : masjidDto.getMasjid_aliasList()) {
-				Masjid_alias masjid_alias = masjidAssembler.assembleMasjid_alias(masjid_aliasDto);
-				masjid_alias.setMasjid(masjid);
-				masjid_aliasRepository.save(masjid_alias);
-			}
-			for (Masjid_memberDto masjid_memberDto : masjidDto.getMasjid_memberList()) {
-				Masjid_member masjid_member = masjidAssembler.assembleMasjid_member(masjid_memberDto);
-				masjid_member.setMasjid(masjid);
-				masjid_memberRepository.save(masjid_member);
-			}
-			for (Prayer_timeDto prayer_timeDto : masjidDto.getPrayer_timeList()) {
-				Prayer_time prayer_time = masjidAssembler.assemblePrayer_time(prayer_timeDto);
-				prayer_time.setMasjid(masjid);
-				prayer_timeRepository.save(prayer_time);
-			}
-			return masjidDto;
-	  
-	  
-	 
-	 
-}
+	@Autowired
+	private MasjidAssembler masjidAssembler;
+
+	public MasjidDto saveMasjid(MasjidDto masjidDto) {
+		Masjid masjid = masjidRepository.save(masjidAssembler.assembleMasjid(masjidDto));
+
+		for (Masjid_aliasDto masjid_aliasDto : masjidDto.getMasjid_aliasList()) {
+			Masjid_alias masjid_alias = masjidAssembler.assembleMasjid_alias(masjid_aliasDto);
+			masjid_alias.setMasjid(masjid);
+			masjid_aliasRepository.save(masjid_alias);
+		}
+		for (Masjid_memberDto masjid_memberDto : masjidDto.getMasjid_memberList()) {
+			Masjid_member masjid_member = masjidAssembler.assembleMasjid_member(masjid_memberDto);
+			masjid_member.setMasjid(masjid);
+			masjid_memberRepository.save(masjid_member);
+		}
+		for (Prayer_timeDto prayer_timeDto : masjidDto.getPrayer_timeList()) {
+			Prayer_time prayer_time = masjidAssembler.assemblePrayer_time(prayer_timeDto);
+			prayer_time.setMasjid(masjid);
+			prayer_timeRepository.save(prayer_time);
+		}
+		return masjidDto;
+
+	}
 }

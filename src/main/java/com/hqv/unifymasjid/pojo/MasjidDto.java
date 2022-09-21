@@ -5,11 +5,11 @@ import java.util.List;
 import javax.persistence.Column;
 
 import lombok.Data;
+
 @Data
 public class MasjidDto {
-	
-	
-	private Long masjid_id;	
+
+	private Long masjid_id;
 	private String name;
 	private String address;
 	private String phone;
@@ -19,10 +19,9 @@ public class MasjidDto {
 	private String contact_person_name;
 	private String contact_person_phone;
 	private String contact_person_email;
-	
+
 	private List<Masjid_memberDto> masjid_memberList;
 	private List<Prayer_timeDto> prayer_timeList;
 	private List<Masjid_aliasDto> masjid_aliasList;
-
 
 }

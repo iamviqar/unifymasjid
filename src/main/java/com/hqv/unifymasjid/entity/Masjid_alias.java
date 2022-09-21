@@ -21,11 +21,9 @@ public class Masjid_alias {
 
 	private Long id;
 	private String name;
-	
-	
+
 	@ManyToOne
 	@JoinColumn(name = "masjid_id")
 	private Masjid masjid;
-
 
 }
