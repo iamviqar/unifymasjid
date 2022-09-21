@@ -51,4 +51,10 @@ public class MasjidService {
 		return masjidDto;
 
 	}
+	public MasjidDto updateMasjid(MasjidDto masjidDto, long id) {
+		masjidDto.setMasjid_id(id);
+		Masjid masjid = masjidAssembler.assembleMasjid(masjidDto);
+		masjidRepository.save(masjid);
+		return masjidDto;
+	}
 }
