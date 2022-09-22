@@ -1,7 +1,9 @@
 package com.hqv.unifymasjid.restapi;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,6 +19,14 @@ public class MasjidRestapi {
 	public MasjidDto saveMasjid(@RequestBody MasjidDto masjidDto) {
 		masjidService.saveMasjid(masjidDto);
 
+		return masjidDto;
+	}
+	
+	@PutMapping("/masjids/{id}")
+	public MasjidDto updateMasjid(
+
+			@RequestBody MasjidDto masjidDto, @PathVariable("id") long id) {
+		masjidService.updateMasjid(masjidDto, id);
 		return masjidDto;
 	}
 
