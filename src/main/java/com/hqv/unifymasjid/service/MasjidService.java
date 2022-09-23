@@ -1,5 +1,8 @@
 package com.hqv.unifymasjid.service;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -57,4 +60,26 @@ public class MasjidService {
 		masjidRepository.save(masjid);
 		return masjidDto;
 	}
+	public Optional<Masjid> getMasjidById(long id) {
+		List<Masjid_member> listmm = masjid_memberRepository.findByMasjidId(id);
+		
+		
+		return masjidRepository.findById(id);
+		
+		
+	}
+	public List<Masjid> getList() {
+		return masjidRepository.findAll();
+	}
+	
+	/*
+	 * public Optional<Masjid_member> getMasjidMById(long id) { return
+	 * masjid_memberRepository.findById(id);
+	 * 
+	 * }
+	 */
+	
+	
+	
+	
 }

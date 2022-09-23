@@ -18,7 +18,7 @@ public class Masjid {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "masjid_id")
 
-	private Long masjid_id;
+	private Long id;
 	private String name;
 	private String address;
 	private String phone;

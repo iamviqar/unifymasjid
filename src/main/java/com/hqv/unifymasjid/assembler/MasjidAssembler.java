@@ -20,7 +20,7 @@ public class MasjidAssembler {
 		Masjid masjid = null;
 		if (masjidDto != null) {
 			masjid = new Masjid();
-			masjid.setMasjid_id(masjidDto.getMasjid_id());
+			masjid.setId(masjidDto.getMasjid_id());
 			masjid.setName(masjidDto.getName());
 			masjid.setAddress(masjidDto.getAddress());
 			masjid.setPhone(masjidDto.getPhone());
