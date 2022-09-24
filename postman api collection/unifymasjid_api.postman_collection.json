@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "fdc1b53a-12e1-4b7d-850e-b3e9a95a4abc",
+		"name": "unifymasjid_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23042672"
+	},
+	"item": [
+		{
+			"name": "localhost:8081/masjid/masjiduser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/masjid/masjiduser",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"masjid",
+						"masjiduser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/masjid/masjid/1",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\":\"hi\",\r\n        \"address\":\"hi\",\r\n        \"phone\":\"123\",\r\n        \"email\":\"email\",\r\n        \"area_code\":\"abc\",\r\n        \"username\":\"xyz\",\r\n        \"contact_person_name\":\"cpname\",\r\n        \"contact_person_phone\":\"cphone\",\r\n        \"contact_person_email\":\"cpemail\",\r\n        \"masjid_memberList\":[{\r\n        \"name\":\"mename\",\r\n        \"phone\":\"mephone\",\r\n        \"email\":\"meemail\"\r\n         }],\r\n        \"prayer_timeList\":[{        \r\n        \"name\":\"name\",\r\n        \"call_time\":\"19:30:10\",\r\n        \"prayer_time\":\"19:30:10\"\r\n          }],\r\n         \"masjid_aliasList\":[{\r\n         \"name\":\"hello\"\r\n            }]\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/masjid/masjid/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"masjid",
+						"masjid",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
