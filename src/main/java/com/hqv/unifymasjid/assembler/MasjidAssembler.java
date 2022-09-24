@@ -57,7 +57,7 @@ public class MasjidAssembler {
 	public Prayer_time assemblePrayer_time(Prayer_timeDto prayer_timeDto) {
 		Prayer_time prayer_time = new Prayer_time();
 		prayer_time.setId(prayer_timeDto.getId());
-		prayer_time.setName(prayer_timeDto.getName());
+		prayer_time.setPname(prayer_timeDto.getPname());
 		prayer_time.setCall_time(prayer_timeDto.getCall_time());
 		prayer_time.setPrayer_time(prayer_timeDto.getPrayer_time());
 		prayer_time.setMasjid(assembleMasjid(prayer_timeDto.getMasjiddto()));

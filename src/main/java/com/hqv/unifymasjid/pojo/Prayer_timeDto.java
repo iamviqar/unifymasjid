@@ -8,7 +8,8 @@ import lombok.Data;
 public class Prayer_timeDto {
 
 	private Long id;
-	private String name;
+	@Column(name = "name")
+	private String pname;
 	private String call_time;
 	private String prayer_time;
 	private MasjidDto masjiddto;

@@ -54,32 +54,22 @@ public class MasjidService {
 		return masjidDto;
 
 	}
+
 	public MasjidDto updateMasjid(MasjidDto masjidDto, long id) {
 		masjidDto.setMasjid_id(id);
 		Masjid masjid = masjidAssembler.assembleMasjid(masjidDto);
 		masjidRepository.save(masjid);
 		return masjidDto;
 	}
+
 	public Optional<Masjid> getMasjidById(long id) {
-		List<Masjid_member> listmm = masjid_memberRepository.findByMasjidId(id);
-		
-		
+
 		return masjidRepository.findById(id);
-		
-		
+
 	}
+
 	public List<Masjid> getList() {
 		return masjidRepository.findAll();
 	}
-	
-	/*
-	 * public Optional<Masjid_member> getMasjidMById(long id) { return
-	 * masjid_memberRepository.findById(id);
-	 * 
-	 * }
-	 */
-	
-	
-	
-	
+
 }

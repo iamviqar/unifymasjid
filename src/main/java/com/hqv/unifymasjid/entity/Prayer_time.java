@@ -21,8 +21,8 @@ public class Prayer_time {
 	@Column(name = "id")
 
 	private Long id;
-
-	private String name;
+	@Column(name = "name")
+	private String pname;
 
 	private String call_time;
 
