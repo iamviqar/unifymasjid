@@ -33,33 +33,9 @@ public class Masjid {
 	private String contact_person_name;
 	private String contact_person_phone;
 	private String contact_person_email;
-	
-	 @OneToMany(targetEntity = Prayer_time.class,cascade = CascadeType.ALL)
-	    @JoinColumn(name ="masjid_id",referencedColumnName = "masjid_id")
-	    private List<Prayer_time> prayers;
-	
-	
-	/*
-	 * @OneToMany(cascade = CascadeType.ALL)
-	 * 
-	 * @JoinColumn(name = "pt", referencedColumnName = "id") List<Prayer_time>
-	 * prayer_times = new ArrayList<>();
-	 */
-	
-	/*
-	 * @OneToMany(fetch = FetchType.EAGER) private List<Prayer_time> prayer_times;
-	 */
-	
-	
-	/*
-	 * @OneToMany(fetch = FetchType.EAGER, mappedBy = "prayer_time", cascade =
-	 * CascadeType.ALL) private List<Prayer_time> prayer_times;
-	 */
-	
-	
-	
-	/*
-	 * @OneToMany(mappedBy="masjid") private Set<Prayer_time> times ;
-	 */
+
+	@OneToMany(targetEntity = Prayer_time.class, cascade = CascadeType.ALL)
+	@JoinColumn(name = "masjid_id", referencedColumnName = "masjid_id")
+	private List<Prayer_time> prayers;
 
 }
